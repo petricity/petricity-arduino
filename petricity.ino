@@ -49,7 +49,7 @@ void blue() {
     analogWrite(11, 0);
 }
 
-setup () {
+void setup () {
     /* Initialize Servomotors */
     leftLeg.attach(5);
     rightLeg.attach(6);
@@ -60,7 +60,7 @@ setup () {
     Serial.begin(9600);
 }
 
-loop() {
+void loop() {
     if (Serial.available()) {
         char c = Serial.read();
         switch (c) {
